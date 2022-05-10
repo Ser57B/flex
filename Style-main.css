@@ -1,0 +1,142 @@
+.flipper {
+   perspective: 400px;
+   position: relative;
+   width: 300px;
+   height: 44px;
+}
+
+.flipper+.flipper {
+   margin-top: 1em;
+}
+
+.flipper-object {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   transition: transform 1s;
+   transform-style: preserve-3d;
+}
+
+.panel {
+   display: flex;
+   min-height: 44px;
+   align-items: center;
+   justify-content: center;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   backface-visibility: hidden;
+}
+
+.flipper-vertical .back {
+   transform: rotateX(180deg);
+}
+
+.flipper-horizontal .back {
+   transform: rotateY(180deg);
+}
+
+.back {
+   background-color: #CC3232;
+}
+
+.front {
+   background-color: #739328;
+}
+
+.flipper:hover .flipper-vertical {
+   transform: rotateX(180deg);
+}
+
+.flipper:hover .flipper-horizontal {
+   transform: rotateY(180deg);
+}
+
+.wrap {
+   perspective: 400px;
+   position: relative;
+   width: 300px;
+   height: 44px;
+   margin-top: 14px;
+}
+
+.conteiner {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   transition: transform 1s;
+   transform-style: preserve-3d;
+}
+
+.iner .elem {
+   transform: rotateY(180deg);
+}
+
+.elem {
+   background-color: rgb(32, 166, 228);
+}
+
+.item {
+   background-color: rgb(233, 219, 21);
+}
+
+.wrap:hover .iner {
+   transform: rotateY(180deg)
+}
+
+.open {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   min-height: 44px;
+   backface-visibility: hidden;
+}
+
+.overhad {
+   perspective: 900px;
+   position: relative;
+   width: 250px;
+   height: 250px;
+   margin-top: 14px;
+}
+
+.overhad__wraper {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   transition: transform 1s;
+   transform-style: preserve-3d;
+}
+
+.inner-two .the-end {
+   transform: rotateX(180deg);
+}
+
+.overhad__head {
+   position: absolute;
+   top: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   min-height: 250px;
+   backface-visibility: hidden;
+}
+
+.galaxy {
+   background-color: rgb(127, 219, 247);
+}
+
+.the-end {
+   background-color: rgb(250, 117, 199);
+}
+
+.overhad:hover .inner-two {
+   transform: rotateX(180deg);
+}
