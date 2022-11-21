@@ -1,3 +1,9 @@
+body {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0;
+}
+
 .flipper {
    perspective: 400px;
    position: relative;
@@ -22,10 +28,10 @@
    min-height: 44px;
    align-items: center;
    justify-content: center;
+   position: absolute;
    top: 0;
    width: 100%;
    height: 100%;
-   position: absolute;
    backface-visibility: hidden;
 }
 
@@ -139,4 +145,267 @@
 
 .overhad:hover .inner-two {
    transform: rotateX(180deg);
+}
+
+.figure {
+   perspective: 400px;
+   position: relative;
+   width: 200px;
+   height: 200px;
+   margin-top: 14px;
+}
+
+.figure__block {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   transition: transform 1s;
+   transform-style: preserve-3d;
+}
+
+.intern .back-end {
+   transform: rotateY(180deg);
+}
+
+.figure__image {
+   position: absolute;
+   top: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   min-height: 200px;
+   backface-visibility: hidden;
+}
+
+.front-one {
+   background-color: rgb(224, 220, 228);
+}
+
+.back-end {
+   background-color: rgb(52, 241, 226);
+
+}
+
+.figure:hover .intern {
+   transform: rotateY(180deg);
+}
+
+.tech {
+   position: relative;
+   display: flex;
+   justify-content: space-evenly;
+   flex-flow: row nowrap;
+   align-items: center;
+   width: 100%;
+   height: 600px;
+   background-color: rgb(212, 202, 108);
+
+}
+
+.btn {
+   width: 100px;
+   height: 100px;
+   font-size: 22px;
+   color: aliceblue;
+   background-color: rgb(13, 25, 182);
+   margin-left: 10px;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   transition: 2s;
+}
+
+.btn:hover {
+   /* transform: translate(-40px, -90px); */
+   transform: rotate(3600deg);
+}
+
+.btn-but {
+   width: 150px;
+   height: 150px;
+   background-color: rgb(7, 143, 64);
+   font-size: 22px;
+   margin-left: 40px;
+   align-self: center;
+   color: aliceblue;
+   transform-origin: bottom right;
+   transition: 2s;
+}
+
+.btn-but:hover {
+
+   transform: rotate(30deg);
+}
+
+.but {
+   width: 100px;
+   height: 100px;
+   background-color: rgb(182, 13, 13);
+   font-size: 22px;
+   margin-left: 10px;
+   margin-right: 10px;
+   color: aliceblue;
+   perspective: 400px;
+   transform-style: preserve-3d;
+
+}
+
+.but:hover {
+   transform: scale3d(1, -1, 14);
+}
+
+.color {
+   position: relative;
+   width: 200px;
+   height: 500px;
+   background-color: rgb(198, 240, 238);
+   padding: 15px;
+}
+
+.text-text {
+   position: absolute;
+   width: 200px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.quad {
+   perspective: 400px;
+   position: relative;
+   width: 300px;
+   height: 50px;
+}
+
+.antena {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   transform-style: preserve-3d;
+   transition: transform 1s;
+}
+
+.ocean .saturn {
+   transform: rotateY(180deg);
+}
+
+.cobra {
+   position: absolute;
+   top: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   backface-visibility: hidden;
+}
+
+.marse {
+   background-color: rgb(171, 238, 247);
+}
+
+.saturn {
+   background-color: rgb(219, 193, 252);
+}
+
+@keyframes pulse {
+   to {
+      text-shadow: 0 0 8px rgb(235, 16, 16);
+      box-shadow: 0 0 7px rgb(216, 16, 16);
+   }
+}
+
+.quad:hover .ocean {
+   transform: rotateY(180deg) translate3d(10px, -70px, -140px);
+   animation: pulse 1s 1s infinite alternate both;
+}
+
+.frame {
+   position: relative;
+   margin-top: 60px;
+}
+
+.circle {
+   position: absolute;
+   right: 10px;
+   width: 100px;
+   height: 100px;
+   /* background-color: rgb(245, 24, 17); */
+   border: 5px solid rgb(5, 209, 90);
+   border-radius: 50%;
+
+   animation-name: disck;
+   animation-duration: 5s;
+   animation-iteration-count: 1;
+   animation-timing-function: ease-in;
+   animation-fill-mode: forwards;
+   padding-top: 15px;
+   margin-bottom: 35px;
+}
+
+.circle:hover {}
+
+
+@keyframes disck {
+   from {
+      background-color: rgb(36, 83, 240);
+      transform: rotate(0deg) scale(.5);
+      opacity: 0;
+      right: 1200px;
+   }
+
+   30% {
+      transform: scale(.6);
+
+   }
+
+   60% {
+      background-color: rgb(6, 116, 39);
+   }
+
+   80% {
+      background-color: rgb(240, 236, 14);
+      transform: rotate(-720deg);
+      right: 10px;
+   }
+
+
+   to {
+      background-color: rgb(245, 24, 17);
+      transform: rotate(0deg) scale(1.2);
+      opacity: 1;
+   }
+}
+
+.announcement {
+   animation-name: fadeln;
+   animation-duration: 7s;
+   animation-timing-function: ease;
+}
+
+@keyframes fadeln {
+   from {
+      opacity: 0;
+      font-size: 10px;
+      transform: rotate(-360deg);
+   }
+
+   30% {
+      font-size: 17px;
+   }
+
+   60% {
+      font-size: 26px;
+   }
+
+   80% {
+      font-size: 30px;
+   }
+
+   to {
+
+      opacity: 1;
+   }
 }
